@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<GridPane fx:controller="view.MainViewController" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Button text="Add Client" onAction="#addClient" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Button text="List Clients" onAction="#listClients" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <TableView fx:id="clientsTable" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+        </columns>
+    </TableView>
+
+    <Label text="From Account:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <TextField fx:id="fromAccountField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    <Label text="To Account:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <TextField fx:id="toAccountField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    <Label text="Amount:" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+    <TextField fx:id="amountField" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+    <Button text="Transfer Money" onAction="#transferMoney" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+
+    <Button text="List Accounts" onAction="#listAccounts" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+    <TableView fx:id="accountsTable" GridPane.rowIndex="11" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <columns>
+            <TableColumn fx:id="accountIdColumn" text="Account ID"/>
+            <TableColumn fx:id="balanceColumn" text="Balance"/>
+            <TableColumn fx:id="currencyColumn" text="Currency"/>
+        </columns>
+    </TableView>
+
+    <Label text="Add to Account ID:" GridPane.rowIndex="12" GridPane.columnIndex="0"/>
+    <TextField fx:id="addAccountIdField" GridPane.rowIndex="12" GridPane.columnIndex="1"/>
+    <Label text="Amount:" GridPane.rowIndex="13" GridPane.columnIndex="0"/>
+    <TextField fx:id="addAmountField" GridPane.rowIndex="13" GridPane.columnIndex="1"/>
+    <Button text="Add Money" onAction="#addMoneyToAccount" GridPane.rowIndex="14" GridPane.columnIndex="1"/>
+</GridPane>
